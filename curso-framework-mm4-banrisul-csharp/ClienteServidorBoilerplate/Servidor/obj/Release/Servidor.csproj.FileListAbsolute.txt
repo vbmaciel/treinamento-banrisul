@@ -1,0 +1,2 @@
+\\n712\Pxh\Soft\Temp\Treinamento MM 2026\curso-framework-mm4-banrisul-csharp\dia-03\04-web-cliente-servidor\_assets\01-cliente-servidor-boilerplate-v1\ClienteServidorBoilerplate\Servidor\obj\Release\Servidor.csprojAssemblyReference.cache
+\\n712\Pxh\Soft\Temp\Treinamento MM 2026\curso-framework-mm4-banrisul-csharp\dia-03\04-web-cliente-servidor\_assets\01-cliente-servidor-boilerplate-v1\ClienteServidorBoilerplate\Servidor\obj\Release\Servidor.csproj.CoreCompileInputs.cache
