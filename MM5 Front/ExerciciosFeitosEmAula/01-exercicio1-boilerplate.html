@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercício bem-vindo!</title>
+</head>
+
+<body>
+    <p id="mensagem-boas-vindas">Seja bem-vindo(a) </p>
+</body>
+
+<script>
+    let nome = prompt("Digite seu nome!")
+    document.getElementById("mensagem-boas-vindas").textContent = `Seja bem-vindo(a) ${(nome == "") ? 'Visitante': nome }`
+</script>
+
+</html>

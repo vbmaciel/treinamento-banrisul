@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título Inicial Padrão</title> 
+    <script src="./script.js"></script>
+</head>
+<body>
+    <input type="text" id="tituloInput" placeholder="Digite o novo título">
+    <button id="atualizarTitulo">Atualizar Título</button>
+
+    <!-- CONTAINER ONDE O NOVO PARÁGRAFO SERÁ INSERIDO -->
+    <div id="mensagem"></div>
+</body>
+
+<script>
+    document.getElementById("atualizarTitulo").addEventListener("click", function() {
+        let novoTitulo = document.getElementById("tituloInput").value
+        if(novoTitulo == ''){
+            alert('É necessário digitar um novo título')
+        }else{
+            document.title = novoTitulo
+            document.getElementById("mensagem").innerHTML = novoTitulo
+        }
+    })
+</script>
+
+</html>

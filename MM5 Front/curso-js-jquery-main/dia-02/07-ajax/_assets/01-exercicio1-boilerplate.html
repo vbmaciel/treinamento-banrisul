@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Conteúdo com jQuery</title>
+    <style>
+        /* 2. ESTILOS CSS PARA O LAYOUT */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f7f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex; /* LAYOUT LADO A LADO */
+            gap: 30px;
+            flex-wrap: wrap; /* Garante quebras em telas menores */
+        }
+        .panel {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 45%; /* Flexível, ocupando quase metade do espaço */
+            min-height: 500px;
+        }
+        h1, h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            color: #333;
+        }
+
+        /* ESTILO DO FORMULÁRIO */
+        form { margin-bottom: 20px; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea { height: 100px; resize: vertical; }
+        button {
+            padding: 10px 15px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+            transition: background-color 0.2s;
+        }
+        .btn-create, .btn-action { background-color: #007bff; }
+        .btn-update { background-color: #ffc107; color: #333; }
+        .btn-action { margin-right: 5px; }
+
+        /* ESTILO DA LISTA DE POSTS */
+        #posts-list .post-item {
+            border: 1px solid #eee;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        #posts-list .post-title {
+            font-weight: bold;
+            color: #007bff;
+        }
+        /* FEEDBACK VISUAL */
+        #feedback {
+            padding: 10px;
+            background-color: #e6ffe6;
+            color: #007e00;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: none; /* Escondido inicialmente */
+        }
+        /* ESTILO DOS COMENTÁRIOS */
+        #comments-display {
+            padding: 15px;
+            border-top: 1px solid #eee;
+            margin-top: 10px;
+            background-color: #f7f7f7;
+            border-radius: 4px;
+        }
+        .comment-item {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-left: 3px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Painel de Gerenciamento de Conteúdo (jQuery CRUD)</h1>
+    <div id="feedback"></div>
+
+    <div class="container">
+        
+        <!-- PAINEL DE POSTS (CRUD) -->
+        <div class="panel" id="posts-panel">
+            <h2>Criar / Editar Post</h2>
+            <form id="post-form">
+                <!-- ID OCULTO PARA MODO DE EDIÇÃO/ATUALIZAÇÃO -->
+                <input type="hidden" id="postId" name="id" value=""> 
+
+                <label for="postTitle">Título do Post</label>
+                <input type="text" id="postTitle" name="title" required>
+
+                <label for="postBody">Conteúdo</label>
+                <textarea id="postBody" name="body" required></textarea>
+
+                <button type="submit" id="btnSubmitPost" class="btn-create">Criar Post</button>
+                <button type="button" id="btnReset" class="btn-update">Limpar</button>
+            </form>
+            
+            <h2>Lista de Posts</h2>
+            <div id="posts-list">
+                <p>A carregar posts...</p>
+            </div>
+        </div>
+
+        <!-- PAINEL DE COMENTÁRIOS (READ) -->
+        <div class="panel" id="comments-panel">
+            <h2>Comentários do Post Selecionado</h2>
+            <div id="comments-display">
+                <p>Selecione um post na lista para carregar os seus comentários.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../03-exercicio1-corrigido.js"></script>
+</body>
+</html>

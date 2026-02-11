@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Eventos 2</title>
+</head>
+<body>
+
+    <h2>Configurações do Pedido</h2>
+    
+    <form id="form-pedido">
+        <label for="tipo">Escolha o Tipo:</label>
+        <select id="tipo">
+            <option value="padrao">Padrão</option>
+            <option value="expresso">Expresso</option>
+            <option value="urgente">Urgente</option>
+        </select>
+        <br><br>
+        <button type="submit">Finalizar Pedido</button>
+    </form>
+    
+    <p>Mensagem de Status: <br> <span id="status-envio">Aguardando seleção...</span></p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
