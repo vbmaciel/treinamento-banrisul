@@ -1,0 +1,84 @@
+#tela-login{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    background-image: url(imagem-fundo.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+#menu {
+  font-family: 'Montserrat';
+  color: #404040;
+  display: flex;                /* Ativa o Flexbox */
+  flex-direction: column;       /* Alinha os itens na vertical (um embaixo do outro) */
+  align-items: flex-start;
+  padding: 50px;
+  border-radius: 30px;
+  gap:25px;
+  padding: 50px;
+  background-color: white;
+}
+
+#menu h1{
+    font-size: 1.6em;
+}
+
+#titulo-login{
+  text-decoration-line: underline;
+  text-decoration-color: #f87842; /* Cor laranja */
+  text-decoration-thickness: 0.15em; /* Espessura */
+  text-underline-offset: 0.3em;
+}
+
+
+.campo-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+#lembrar {
+    display: flex;
+}
+
+.campo-input input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  align-self: center;
+  width: 160px;
+  border-radius: 30px;
+  background-image: linear-gradient(#000080, #000080);
+  border: solid 1px #000080;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#menu a {
+  color: rgb(0, 174, 255);
+  font-weight: 500;
+}
+
+.esqueceu-senha {
+  text-align: center;
+}
+
+button:hover{
+  cursor: pointer;
+}

@@ -1,0 +1,44 @@
+#container-tela-inicial {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 100px auto;
+}
+
+#container-tela-inicial nav {
+    display: flex;
+    flex-direction: column;     
+    grid-row: 1/-1;
+    padding-top: 100px;
+    background-color: #f87842; 
+    text-align: center;
+}
+
+#container-tela-inicial nav p {
+    width: 100%;
+    border-bottom: 0.05em solid white;
+    color: white;
+}
+
+#container-tela-inicial nav p:hover {
+    cursor: pointer;
+}
+
+#container-tela-inicial nav p:active {
+    color: #000080;
+    border-bottom: 0.05em solid #000080;
+    font-size: 20px;
+}
+
+#container-tela-inicial header {
+    display: flex;
+    background-color: #000080;
+    justify-content: flex-end
+}
+
+#container-tela-inicial header #sair {
+  margin-right: 30px;
+  background-image: linear-gradient(#f87842, #f87842);
+  border: solid 1px #f87842;
+}
