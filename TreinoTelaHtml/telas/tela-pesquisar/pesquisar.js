@@ -11,10 +11,15 @@ $(document).ready(function() {
 
         console.log("DADOS SALVOS: ", dadosSalvos);
         // 2. Se existir algo salvo, transforma de volta em objeto
+        $('#tabela-pesquisa tbody').empty();
         if (dadosSalvos) {
             console.log("Tamanho do alvo:", $('#tabela-dados tbody').length);
                 dadosSalvos.forEach(usuario => {
                 // const usuario = element;
+                console.log("US:", usuario)
+                if(usuario.nome != dadosArray[0].value){
+                    $("#corpo").html("Nada encontrado")
+                }else{
                 if(usuario.nome == dadosArray[0].value){
                     console.log(usuario);
                     const novaLinha = `
@@ -25,8 +30,7 @@ $(document).ready(function() {
                         <td>${usuario['valor-depositar']}</td>
                     </tr>`;
                     $('#tabela-pesquisa tbody').append(novaLinha);
-                }
-                novaLinha = '';
+                }}
             });
         };
         

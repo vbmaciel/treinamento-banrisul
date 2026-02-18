@@ -1,0 +1,31 @@
+#pesquisar-cliente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#formulario-pesquisa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    gap: 10px;
+}
+
+.pesquisa-cliente input {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pesquisa-cliente {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
